@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <Transition
+
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            motion:layout_constraintEnd_toStartOf="@+id/footballField"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/footballField"
+            android:layout_marginTop="0dp"
+            motion:layout_constraintHorizontal_bias="0.0" />
+        <Constraint
+            android:layout_marginEnd="84dp"
+            android:layout_height="727dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHorizontal_bias="0.408"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="407dp"
+            android:layout_marginStart="58dp"
+            android:id="@+id/footballField" />
+        <Constraint
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:id="@+id/ball"
+            motion:layout_constraintEnd_toStartOf="@+id/footballField"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="68dp" />
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/ball"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            motion:layout_constraintStart_toEndOf="@+id/footballField"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_editor_absoluteX="360dp"
+            motion:layout_constraintTop_toBottomOf="@+id/footballField">
+            <Layout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                motion:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+        </Constraint>
+        <Constraint
+            android:layout_marginEnd="84dp"
+            android:layout_height="727dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHorizontal_bias="0.408"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="407dp"
+            android:layout_marginStart="58dp"
+            android:id="@+id/footballField" />
+
+    </ConstraintSet>
+</MotionScene>
